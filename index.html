@@ -9,114 +9,133 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <script>
-/* ================================================================
-   ██████╗  █████╗ ██╗███╗   ██╗███████╗██╗
-   ██╔══██╗██╔══██╗██║████╗  ██║██╔════╝██║
-   ██████╔╝███████║██║██╔██╗ ██║█████╗  ██║
-   ██╔═══╝ ██╔══██║██║██║╚██╗██║██╔══╝  ██║
-   ██║     ██║  ██║██║██║ ╚████║███████╗███████╗
-   ╚═╝     ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚══════╝╚══════╝
+/* ═══════════════════════════════════════════════════════════════════
+  ██████╗  █████╗ ██╗███╗  ██╗███████╗██╗    
+  ██╔══██╗██╔══██╗██║████╗ ██║██╔════╝██║    
+  ██████╔╝███████║██║██╔██╗██║█████╗  ██║    
+  ██╔═══╝ ██╔══██║██║██║╚████║██╔══╝  ██║   
+  ██║     ██║  ██║██║██║ ╚███║███████╗███████╗
+  ╚═╝     ╚═╝  ╚═╝╚═╝╚═╝  ╚══╝╚══════╝╚══════╝
 
-   DE CONFIGURAÇÃO — ALTERE APENAS AQUI!
-   Cada variável tem sua tarefa indicada ao lado.
-================================================================ */
+  ██████╗ ██████╗ ███╗  ██╗███████╗██╗ ██████╗
+ ██╔════╝██╔═══██╗████╗ ██║██╔════╝██║██╔════╝
+ ██║     ██║   ██║██╔██╗██║█████╗  ██║██║  ███╗
+ ██║     ██║   ██║██║╚████║██╔══╝  ██║██║   ██║
+ ╚██████╗╚██████╔╝██║ ╚███║██║     ██║╚██████╔╝
+  ╚═════╝ ╚═════╝ ╚═╝  ╚══╝╚═╝     ╚═╝ ╚═════╝
+═══════════════════════════════════════════════════════════════════ */
 
 const CONFIG = {
 
-    /* ----------------------------------------------------------
-       T1 · IDENTIDADE — Nome & Profissão
-    ---------------------------------------------------------- */
-    nome:           "Perchtattoo",          // Nome exibido no logo e rodapé
-    profissao:      "Tattoo Artist",        // Subtítulo abaixo do nome no Hero
-    cidade:         "São Paulo, SP",        // T5 · Cidade exibida no Hero e Contato
-    pais:           "Brasil",              // País exibido no Contato
+/* ┌─────────────────────────────────────────────────────────────┐
+   │  ①  IDENTIDADE  —  Quem é você                             │
+   └─────────────────────────────────────────────────────────────┘ */
+    nome:       "Allan Perch",
+    profissao:  "Tattoo Artist",
+    cidade:     "São Paulo",
+    estado:     "SP",
+    pais:       "Brasil",
 
-    /* ----------------------------------------------------------
-       T3 · REDES SOCIAIS
-    ---------------------------------------------------------- */
-    instagram_user: "@allanperch.tattoo",           // Texto exibido no site
-    instagram_link: "https://instagram.com/SEUUSER",// Link real do Instagram
-    whatsapp_num:   "+55 (11) 9XXXX-XXXX",          // Texto exibido no site
-    whatsapp_link:  "https://wa.me/5511XXXXXXXXX",  // T4 · Link do WhatsApp (só números)
+/* ┌─────────────────────────────────────────────────────────────┐
+   │  ②  LOGO  —  Imagem do seu logo                            │
+   │                                                             │
+   │  → Suba em: GitHub → Add file → images/logo.png            │
+   │  → Use caminho: "images/logo.png"                          │
+   │  → Deixe "" para usar nome em texto                        │
+   └─────────────────────────────────────────────────────────────┘ */
+    logo:                    "",
+    logo_altura_nav:         "55",
+    logo_altura_hero:        "90",
+    logo_altura_footer:      "60",
+    logo_alt:                "Allan Perch Tattoo",
 
-    /* ----------------------------------------------------------
-       T6 · ESTATÍSTICAS (números nos cards do Sobre)
-    ---------------------------------------------------------- */
-    stat_experiencia:  "8+",    // Anos de experiência
-    stat_tatuagens:    "500+",  // Tatuagens realizadas
-    stat_premiacoes:   "12",    // Premiações
-    stat_custom_label: "100%",  // 4º card — valor
-    stat_custom_text:  "Personalizado", // 4º card — label
+/* ┌─────────────────────────────────────────────────────────────┐
+   │  ③  VÍDEO DE FUNDO  —  Background do Hero                  │
+   │                                                             │
+   │  → Suba em: GitHub → Add file → videos/bg.mp4              │
+   │  → Use caminho: "videos/bg.mp4"                            │
+   │  → Deixe "" para fundo preto com gradiente                 │
+   │  → overlay: 0.0 = sem escuridão · 1.0 = totalmente preto   │
+   └─────────────────────────────────────────────────────────────┘ */
+    video_fundo:             "",
+    video_overlay:           "0.72",
+    video_fallback_cor1:     "#080808",
+    video_fallback_cor2:     "#111111",
 
-    /* ----------------------------------------------------------
-       T10 · TEXTOS HERO
-    ---------------------------------------------------------- */
-    hero_linha1: "Arte gravada",       // Primeira linha do título
-    hero_linha2: "na pele.",           // Segunda linha (em dourado/itálico)
-    hero_subtitulo: "Cada tatuagem é uma história única. Especialista em fine line, blackwork e realismo — criando obras que resistem ao tempo.",
+/* ┌─────────────────────────────────────────────────────────────┐
+   │  ④  FOTO DE PERFIL  —  Seção Sobre                         │
+   │                                                             │
+   │  → Suba em: GitHub → Add file → images/perfil.jpg          │
+   │  → Use caminho: "images/perfil.jpg"                        │
+   └─────────────────────────────────────────────────────────────┘ */
+    foto_perfil:             "",
 
-    /* ----------------------------------------------------------
-       T9 · TEXTOS SOBRE
-    ---------------------------------------------------------- */
-    sobre_titulo_parte1: "Transformando visões em",
-    sobre_titulo_parte2: "arte permanente",      // parte em dourado
-    sobre_paragrafo1: "Com mais de oito anos dedicados à arte da tatuagem, desenvolvi um estilo que equilibra a delicadeza do fine line com a intensidade do blackwork — criando peças que contam histórias únicas na pele de cada cliente.",
-    sobre_paragrafo2: "Cada projeto começa com uma conversa profunda, entendendo não apenas a ideia, mas a emoção e o significado por trás de cada traço. O resultado é sempre uma obra de arte personalizada e intemporal.",
+/* ┌─────────────────────────────────────────────────────────────┐
+   │  ⑤  REDES SOCIAIS                                          │
+   └─────────────────────────────────────────────────────────────┘ */
+    instagram_user:          "@allanperch.tattoo",
+    instagram_link:          "https://instagram.com/allanperch.tattoo",
+    whatsapp_num:            "+55 (11) 9XXXX-XXXX",
+    whatsapp_link:           "https://wa.me/5511XXXXXXXXX",
+    whatsapp_msg:            "Olá! Quero agendar uma consulta de tatuagem.",
 
-    /* ----------------------------------------------------------
-       T1 · FOTO DE PERFIL (Sobre)
-       → Suba a foto no GitHub na pasta /images/
-       → Altere o caminho abaixo
-    ---------------------------------------------------------- */
-    foto_perfil: "",  // Ex: "images/allan-perch.jpg" — deixe "" para placeholder
+/* ┌─────────────────────────────────────────────────────────────┐
+   │  ⑥  HERO  —  Primeira tela do site                         │
+   └─────────────────────────────────────────────────────────────┘ */
+    hero_linha1:             "Arte gravada",
+    hero_linha2:             "na pele.",
+    hero_subtitulo:          "Cada tatuagem é uma história única. Especialista em fine line, blackwork e realismo — criando obras que resistem ao tempo.",
+    hero_btn1:               "Agendar Consulta",
+    hero_btn2:               "Ver Portfólio",
 
-    /* ----------------------------------------------------------
-       T2 · PORTFÓLIO — 6 trabalhos
-       → Suba as fotos no GitHub na pasta /images/
-       → Categorias disponíveis: "fineline" | "blackwork" | "realismo"
-    ---------------------------------------------------------- */
+/* ┌─────────────────────────────────────────────────────────────┐
+   │  ⑦  SOBRE  —  Seção Sobre Mim                              │
+   └─────────────────────────────────────────────────────────────┘ */
+    sobre_titulo_parte1:     "Transformando visões em",
+    sobre_titulo_parte2:     "arte permanente",
+    sobre_paragrafo1:        "Com mais de oito anos dedicados à arte da tatuagem, desenvolvi um estilo que equilibra a delicadeza do fine line com a intensidade do blackwork — criando peças que contam histórias únicas na pele de cada cliente.",
+    sobre_paragrafo2:        "Cada projeto começa com uma conversa profunda, entendendo não apenas a ideia, mas a emoção e o significado por trás de cada traço. O resultado é sempre uma obra de arte personalizada e intemporal.",
+    sobre_cta_texto:         "Conheça meu trabalho",
+
+/* ┌─────────────────────────────────────────────────────────────┐
+   │  ⑧  ESTATÍSTICAS  —  Números da seção Sobre                │
+   └─────────────────────────────────────────────────────────────┘ */
+    stat_exp_numero:         "8+",
+    stat_exp_label:          "Anos de Experiência",
+    stat_tattoos_numero:     "500+",
+    stat_tattoos_label:      "Tatuagens Realizadas",
+    stat_premios_numero:     "12",
+    stat_premios_label:      "Premiações",
+    stat_custom_numero:      "100%",
+    stat_custom_label:       "Personalizado",
+
+/* ┌─────────────────────────────────────────────────────────────┐
+   │  ⑨  PORTFÓLIO  —  9 hexágonos (3 linhas de 3)             │
+   │                                                             │
+   │  Como adicionar fotos:                                      │
+   │  1. GitHub → Add file → Upload files                       │
+   │  2. Arraste a foto                                          │
+   │  3. No nome do arquivo escreva: images/tattoo-1.jpg        │
+   │  4. Clique em Commit changes                               │
+   │  5. Cole o caminho aqui: foto: "images/tattoo-1.jpg"       │
+   │                                                             │
+   │  categorias: "fineline" | "blackwork" | "realismo"         │
+   └─────────────────────────────────────────────────────────────┘ */
     portfolio: [
-        {
-            foto:      "",                      // Ex: "images/tattoo-1.jpg"
-            titulo:    "Fine Line Floral",
-            categoria: "fineline",
-            label:     "Fine Line"
-        },
-        {
-            foto:      "",
-            titulo:    "Mandala Geométrica",
-            categoria: "blackwork",
-            label:     "Blackwork"
-        },
-        {
-            foto:      "",
-            titulo:    "Retrato Realista",
-            categoria: "realismo",
-            label:     "Realismo"
-        },
-        {
-            foto:      "",
-            titulo:    "Botanical Line Art",
-            categoria: "fineline",
-            label:     "Fine Line"
-        },
-        {
-            foto:      "",
-            titulo:    "Serpente & Flores",
-            categoria: "blackwork",
-            label:     "Blackwork"
-        },
-        {
-            foto:      "",
-            titulo:    "Wildlife Art",
-            categoria: "realismo",
-            label:     "Realismo"
-        },
+        { foto: "", titulo: "Fine Line Floral",    categoria: "fineline",  label: "Fine Line"  },
+        { foto: "", titulo: "Mandala Geométrica",  categoria: "blackwork", label: "Blackwork"  },
+        { foto: "", titulo: "Retrato Realista",    categoria: "realismo",  label: "Realismo"   },
+        { foto: "", titulo: "Botanical Line Art",  categoria: "fineline",  label: "Fine Line"  },
+        { foto: "", titulo: "Serpente & Flores",   categoria: "blackwork", label: "Blackwork"  },
+        { foto: "", titulo: "Wildlife Art",        categoria: "realismo",  label: "Realismo"   },
+        { foto: "", titulo: "Geometric Sleeve",    categoria: "blackwork", label: "Blackwork"  },
+        { foto: "", titulo: "Micro Realismo",      categoria: "realismo",  label: "Realismo"   },
+        { foto: "", titulo: "Delicate Script",     categoria: "fineline",  label: "Fine Line"  },
     ],
 
-    /* ----------------------------------------------------------
-       T13 · CATEGORIAS DO FILTRO DO PORTFÓLIO
-    ---------------------------------------------------------- */
+/* ┌─────────────────────────────────────────────────────────────┐
+   │  ⑩  FILTROS DO PORTFÓLIO                                   │
+   └─────────────────────────────────────────────────────────────┘ */
     filtros: [
         { valor: "all",       label: "Todos"     },
         { valor: "fineline",  label: "Fine Line" },
@@ -124,886 +143,952 @@ const CONFIG = {
         { valor: "realismo",  label: "Realismo"  },
     ],
 
-    /* ----------------------------------------------------------
-       T11 · CORES DO SITE
-       → Altere os valores hex para mudar o tema visual
-    ---------------------------------------------------------- */
-    cor_dourado:       "#C9A84C",   // Cor principal de destaque
-    cor_dourado_claro: "#E8C97A",   // Hover do dourado
-    cor_fundo:         "#080808",   // Fundo principal (preto)
-    cor_texto:         "#F5F0E8",   // Cor do texto principal
+/* ┌─────────────────────────────────────────────────────────────┐
+   │  ⑪  PROCESSO  —  4 etapas                                  │
+   └─────────────────────────────────────────────────────────────┘ */
+    processo_titulo:  "O Processo",
+    processo_subtit:  "Do primeiro contato à tatuagem finalizada, cada etapa é cuidadosamente planejada.",
+    processos: [
+        { num:"01", titulo:"Consulta Inicial",      texto:"Conversamos sobre sua ideia, referências, posicionamento e estilo desejado."          },
+        { num:"02", titulo:"Design Exclusivo",      texto:"Crio um design único baseado nas suas referências. Você verá o projeto antes da sessão." },
+        { num:"03", titulo:"Sessão de Tatuagem",    texto:"Em ambiente limpo e confortável, transformamos o design em arte permanente."            },
+        { num:"04", titulo:"Cicatrização & Retoque",texto:"Orientações completas de cicatrização e retoque gratuito se necessário."               },
+    ],
 
-    /* ----------------------------------------------------------
-       T14 · RODAPÉ
-    ---------------------------------------------------------- */
-    rodape_texto: "© 2025 Allan Perch Tattoo · Todos os direitos reservados",
+/* ┌─────────────────────────────────────────────────────────────┐
+   │  ⑫  CONTATO  —  Textos do formulário                       │
+   └─────────────────────────────────────────────────────────────┘ */
+    contato_titulo_p1:  "Pronto para eternizar",
+    contato_titulo_p2:  "sua história na pele?",
+    contato_subtitulo:  "Cada tatuagem é uma colaboração entre artista e cliente. Quanto mais você compartilha, mais especial será o resultado.",
+    formspree_id:       "mgojkpqo",
+
+/* ┌─────────────────────────────────────────────────────────────┐
+   │  ⑬  CORES  —  Paleta do site                               │
+   └─────────────────────────────────────────────────────────────┘ */
+    cor_dourado:       "#C9A84C",
+    cor_dourado_claro: "#E8C97A",
+    cor_dourado_escuro:"#A07830",
+    cor_fundo:         "#080808",
+    cor_escuro1:       "#111111",
+    cor_escuro2:       "#1A1A1A",
+    cor_escuro3:       "#222222",
+    cor_texto:         "#F5F0E8",
+    cor_cinza:         "#888888",
+    cor_cinza_claro:   "#BBBBBB",
+
+/* ┌─────────────────────────────────────────────────────────────┐
+   │  ⑭  TIPOGRAFIA  —  Fontes                                  │
+   └─────────────────────────────────────────────────────────────┘ */
+    fonte_serif:       "'Cormorant Garamond', serif",
+    fonte_sans:        "'Montserrat', sans-serif",
+
+/* ┌─────────────────────────────────────────────────────────────┐
+   │  ⑮  RODAPÉ                                                  │
+   └─────────────────────────────────────────────────────────────┘ */
+    rodape_texto:      "© 2025 Allan Perch Tattoo · Todos os direitos reservados",
 
 };
-/* ================================================================
-   FIM DO PAINEL — NÃO ALTERE NADA ABAIXO DESTA LINHA
-================================================================ */
+/* ═══════════════════════════════════════════════════════════════════
+   FIM DO PAINEL DE CONFIGURAÇÃO — NÃO ALTERE NADA ABAIXO
+═══════════════════════════════════════════════════════════════════ */
 </script>
 
     <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
+        /* ── RESET & BASE ── */
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
         :root {
-            --gold: #C9A84C;
-            --gold-light: #E8C97A;
-            --gold-dark: #A07830;
-            --black: #080808;
-            --dark: #111111;
-            --dark-2: #1A1A1A;
-            --dark-3: #222222;
-            --gray: #888888;
-            --gray-light: #BBBBBB;
-            --white: #F5F0E8;
-            --font-serif: 'Cormorant Garamond', serif;
-            --font-sans: 'Montserrat', sans-serif;
-            --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --gold:        #C9A84C;
+            --gold-light:  #E8C97A;
+            --gold-dark:   #A07830;
+            --black:       #080808;
+            --dark:        #111111;
+            --dark-2:      #1A1A1A;
+            --dark-3:      #222222;
+            --gray:        #888888;
+            --gray-light:  #BBBBBB;
+            --white:       #F5F0E8;
+            --font-serif:  'Cormorant Garamond', serif;
+            --font-sans:   'Montserrat', sans-serif;
+            --ease:        cubic-bezier(0.25,0.46,0.45,0.94);
+            --transition:  all 0.4s var(--ease);
+            /* hexágono */
+            --hex-w:       200px;
+            --hex-h:       calc(var(--hex-w) * 1.1547);
+            --hex-gap:     6px;
         }
-
-        html { scroll-behavior: smooth; font-size: 16px; }
+        html { scroll-behavior:smooth; font-size:16px; }
         body {
-            background-color: var(--black);
-            color: var(--white);
-            font-family: var(--font-sans);
-            font-weight: 300;
-            overflow-x: hidden;
-            cursor: none;
+            background:var(--black); color:var(--white);
+            font-family:var(--font-sans); font-weight:300;
+            overflow-x:hidden; cursor:none;
         }
 
-        .cursor {
-            width: 8px; height: 8px;
-            background: var(--gold);
-            border-radius: 50%;
-            position: fixed; top: 0; left: 0;
-            pointer-events: none; z-index: 9999;
-            transition: transform 0.1s ease;
+        /* ── CURSOR ── */
+        .cursor,.cursor-follower {
+            position:fixed; border-radius:50%; pointer-events:none; z-index:9999;
+            transform:translate(-50%,-50%); will-change:transform;
         }
+        .cursor          { width:8px;  height:8px;  background:var(--gold); }
         .cursor-follower {
-            width: 32px; height: 32px;
-            border: 1px solid rgba(201,168,76,0.5);
-            border-radius: 50%;
-            position: fixed; top: 0; left: 0;
-            pointer-events: none; z-index: 9998;
-            transition: transform 0.15s ease, width 0.3s ease, height 0.3s ease;
+            width:36px; height:36px; z-index:9998;
+            border:1px solid rgba(201,168,76,.45);
+            transition:width .3s ease,height .3s ease,border-color .3s ease;
         }
 
+        /* ── SCROLLBAR ── */
+        ::-webkit-scrollbar { width:4px; }
+        ::-webkit-scrollbar-track { background:var(--black); }
+        ::-webkit-scrollbar-thumb { background:var(--gold-dark); border-radius:2px; }
+
+        /* ── NAV ── */
         nav {
-            position: fixed; top: 0; left: 0; right: 0;
-            z-index: 1000; padding: 28px 60px;
-            display: flex; align-items: center; justify-content: space-between;
-            transition: var(--transition);
+            position:fixed; inset:auto 0 auto 0; z-index:1000;
+            padding:22px 64px;
+            display:flex; align-items:center; justify-content:space-between;
+            transition:var(--transition);
         }
         nav.scrolled {
-            padding: 18px 60px;
-            background: rgba(8,8,8,0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(201,168,76,0.15);
+            padding:12px 64px;
+            background:rgba(8,8,8,.96);
+            backdrop-filter:blur(24px);
+            border-bottom:1px solid rgba(201,168,76,.12);
         }
-        .nav-logo {
-            font-family: var(--font-serif); font-size: 1.5rem;
-            font-weight: 300; letter-spacing: 0.15em;
-            color: var(--white); text-decoration: none;
+        .nav-logo { display:flex; align-items:center; text-decoration:none; }
+        .nav-logo img { height:50px; width:auto; object-fit:contain; }
+        .nav-logo-text {
+            font-family:var(--font-serif); font-size:1.45rem;
+            font-weight:300; letter-spacing:.14em; color:var(--white);
         }
-        .nav-logo span { color: var(--gold); }
-        .nav-links { display: flex; gap: 48px; list-style: none; }
+        .nav-logo-text b { color:var(--gold); font-weight:300; }
+        .nav-links { display:flex; gap:44px; list-style:none; }
         .nav-links a {
-            font-family: var(--font-sans); font-size: 0.7rem;
-            font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase;
-            color: var(--gray-light); text-decoration: none;
-            transition: var(--transition); position: relative;
+            font-family:var(--font-sans); font-size:.68rem; font-weight:500;
+            letter-spacing:.2em; text-transform:uppercase;
+            color:var(--gray-light); text-decoration:none;
+            position:relative; transition:color .3s ease;
         }
         .nav-links a::after {
-            content: ''; position: absolute; bottom: -4px; left: 0;
-            width: 0; height: 1px; background: var(--gold); transition: width 0.3s ease;
+            content:''; position:absolute; bottom:-5px; left:0;
+            width:0; height:1px; background:var(--gold); transition:width .35s ease;
         }
-        .nav-links a:hover { color: var(--gold); }
-        .nav-links a:hover::after { width: 100%; }
+        .nav-links a:hover { color:var(--gold); }
+        .nav-links a:hover::after { width:100%; }
         .nav-cta {
-            color: var(--gold) !important;
-            border: 1px solid rgba(201,168,76,0.4);
-            padding: 10px 24px !important;
+            color:var(--gold) !important;
+            border:1px solid rgba(201,168,76,.35) !important;
+            padding:10px 26px !important; border-radius:0;
         }
-        .nav-cta:hover { background: var(--gold) !important; color: var(--black) !important; }
-        .nav-cta::after { display: none !important; }
+        .nav-cta:hover { background:var(--gold) !important; color:var(--black) !important; }
+        .nav-cta::after { display:none !important; }
+        /* hamburger */
+        .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; z-index:1010; }
+        .hamburger span { display:block; width:28px; height:1px; background:var(--white); transition:var(--transition); }
+        .hamburger.open span:nth-child(1) { transform:rotate(45deg) translate(4px,4px); }
+        .hamburger.open span:nth-child(2) { opacity:0; }
+        .hamburger.open span:nth-child(3) { transform:rotate(-45deg) translate(4px,-4px); }
+        /* mobile menu */
+        .mob-menu {
+            position:fixed; inset:0; background:var(--black); z-index:1005;
+            display:flex; flex-direction:column; align-items:center; justify-content:center; gap:40px;
+            opacity:0; pointer-events:none; transition:opacity .4s ease;
+        }
+        .mob-menu.open { opacity:1; pointer-events:all; }
+        .mob-menu a {
+            font-family:var(--font-serif); font-size:2.8rem; font-weight:300;
+            color:var(--white); text-decoration:none; letter-spacing:.08em; transition:color .3s ease;
+        }
+        .mob-menu a:hover { color:var(--gold); }
 
-        .hamburger {
-            display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001;
-        }
-        .hamburger span { display: block; width: 28px; height: 1px; background: var(--white); transition: var(--transition); }
-        .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(4px,4px); }
-        .hamburger.active span:nth-child(2) { opacity: 0; }
-        .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(4px,-4px); }
-        .mobile-menu {
-            display: none; position: fixed; inset: 0; background: var(--black);
-            z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 40px;
-        }
-        .mobile-menu.active { display: flex; }
-        .mobile-menu a {
-            font-family: var(--font-serif); font-size: 2.5rem; font-weight: 300;
-            color: var(--white); text-decoration: none; letter-spacing: 0.1em; transition: var(--transition);
-        }
-        .mobile-menu a:hover { color: var(--gold); }
-
+        /* ── HERO ── */
         #hero {
-            min-height: 100vh; display: flex; align-items: center;
-            position: relative; overflow: hidden; padding: 0 60px;
+            min-height:100vh; display:flex; align-items:center; justify-content:center;
+            position:relative; overflow:hidden;
+            padding:120px 64px 100px; text-align:center;
         }
         .hero-bg {
-            position: absolute; inset: 0;
-            background: linear-gradient(135deg, #080808 0%, #111111 50%, #0a0a0a 100%);
+            position:absolute; inset:0; z-index:0;
+            background:var(--black);
         }
-        .hero-bg::before {
-            content: ''; position: absolute; inset: 0;
-            background:
-                radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.06) 0%, transparent 60%),
-                radial-gradient(ellipse at 30% 80%, rgba(201,168,76,0.03) 0%, transparent 40%);
+        .hero-bg video { width:100%; height:100%; object-fit:cover; }
+        .hero-gradient {
+            width:100%; height:100%;
+            background:linear-gradient(135deg,#080808 0%,#101010 50%,#0d0d0d 100%);
         }
-        .hero-line {
-            position: absolute; top: 0; bottom: 0; width: 1px;
-            background: linear-gradient(to bottom, transparent, rgba(201,168,76,0.3), transparent);
+        .hero-overlay { position:absolute; inset:0; z-index:1; }
+        .hero-vline {
+            position:absolute; top:0; bottom:0; width:1px; z-index:2;
+            background:linear-gradient(to bottom,transparent,rgba(201,168,76,.22),transparent);
         }
-        .hero-line:nth-child(1) { left: 60px; }
-        .hero-line:nth-child(2) { right: 60px; }
-        .hero-content { position: relative; z-index: 2; max-width: 700px; }
+        .hero-vline:nth-of-type(1) { left:64px; }
+        .hero-vline:nth-of-type(2) { right:64px; }
+        .hero-content {
+            position:relative; z-index:3;
+            display:flex; flex-direction:column; align-items:center;
+            max-width:880px; margin:0 auto;
+        }
+        /* hero logo */
+        .hero-logo { margin-bottom:40px; opacity:0; animation:aFadeDown .9s ease .15s forwards; }
+        .hero-logo img { height:88px; width:auto; object-fit:contain; filter:drop-shadow(0 0 24px rgba(201,168,76,.4)); }
+        .hero-logo-txt {
+            font-family:var(--font-serif); font-size:1rem; font-weight:300;
+            letter-spacing:.38em; text-transform:uppercase; color:var(--gold);
+            display:flex; align-items:center; gap:14px;
+        }
+        .hero-logo-txt::before,.hero-logo-txt::after { content:''; display:block; width:44px; height:1px; background:var(--gold); }
+        /* eyebrow */
         .hero-eyebrow {
-            font-family: var(--font-sans); font-size: 0.65rem; font-weight: 500;
-            letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold);
-            margin-bottom: 28px; display: flex; align-items: center; gap: 16px;
-            opacity: 0; animation: fadeUp 1s ease 0.3s forwards;
+            font-size:.6rem; font-weight:500; letter-spacing:.38em; text-transform:uppercase;
+            color:var(--gold); margin-bottom:22px;
+            display:flex; align-items:center; justify-content:center; gap:14px;
+            opacity:0; animation:aFadeUp .9s ease .35s forwards;
         }
-        .hero-eyebrow::before { content: ''; display: block; width: 40px; height: 1px; background: var(--gold); }
+        .hero-eyebrow::before,.hero-eyebrow::after { content:''; display:block; width:32px; height:1px; background:var(--gold); }
+        /* title */
         .hero-title {
-            font-family: var(--font-serif); font-size: clamp(3.5rem,7vw,7rem);
-            font-weight: 300; line-height: 1.05; letter-spacing: -0.01em;
-            margin-bottom: 32px; opacity: 0; animation: fadeUp 1s ease 0.5s forwards;
+            font-family:var(--font-serif); font-size:clamp(3rem,7vw,7.5rem);
+            font-weight:300; line-height:1.05; letter-spacing:-.01em;
+            margin-bottom:30px; opacity:0; animation:aFadeUp .9s ease .55s forwards;
         }
-        .hero-title em { font-style: italic; color: var(--gold); display: block; }
-        .hero-subtitle {
-            font-family: var(--font-sans); font-size: 0.8rem; font-weight: 300;
-            letter-spacing: 0.12em; color: var(--gray); line-height: 2;
-            max-width: 420px; margin-bottom: 56px;
-            opacity: 0; animation: fadeUp 1s ease 0.7s forwards;
+        .hero-title em { font-style:italic; color:var(--gold); display:block; }
+        /* sub */
+        .hero-sub {
+            font-size:.8rem; font-weight:300; letter-spacing:.1em; color:var(--gray-light);
+            line-height:2; max-width:520px; margin:0 auto 52px;
+            opacity:0; animation:aFadeUp .9s ease .75s forwards;
         }
+        /* actions */
         .hero-actions {
-            display: flex; gap: 24px; align-items: center;
-            opacity: 0; animation: fadeUp 1s ease 0.9s forwards;
+            display:flex; gap:24px; align-items:center; justify-content:center; flex-wrap:wrap;
+            opacity:0; animation:aFadeUp .9s ease .95s forwards;
         }
-        .btn-primary {
-            display: inline-block; padding: 16px 40px;
-            background: var(--gold); color: var(--black);
-            font-family: var(--font-sans); font-size: 0.65rem; font-weight: 600;
-            letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none;
-            transition: var(--transition);
+        .btn-gold {
+            display:inline-block; padding:17px 42px;
+            background:var(--gold); color:var(--black);
+            font-family:var(--font-sans); font-size:.65rem; font-weight:600;
+            letter-spacing:.25em; text-transform:uppercase; text-decoration:none;
+            transition:var(--transition); position:relative; overflow:hidden;
         }
-        .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 20px 40px rgba(201,168,76,0.25); }
-        .btn-secondary {
-            display: inline-flex; align-items: center; gap: 12px;
-            color: var(--gray-light); font-family: var(--font-sans);
-            font-size: 0.65rem; font-weight: 500; letter-spacing: 0.2em;
-            text-transform: uppercase; text-decoration: none; transition: var(--transition);
+        .btn-gold::before {
+            content:''; position:absolute; inset:0;
+            background:var(--gold-light); transform:scaleX(0); transform-origin:left;
+            transition:transform .4s var(--ease);
         }
-        .btn-secondary:hover { color: var(--gold); }
-        .btn-secondary::after { content: ''; display: block; width: 32px; height: 1px; background: currentColor; transition: width 0.3s ease; }
-        .btn-secondary:hover::after { width: 48px; }
+        .btn-gold:hover::before { transform:scaleX(1); }
+        .btn-gold span { position:relative; z-index:1; }
+        .btn-ghost {
+            display:inline-flex; align-items:center; gap:12px;
+            color:var(--gray-light); font-family:var(--font-sans);
+            font-size:.65rem; font-weight:500; letter-spacing:.2em;
+            text-transform:uppercase; text-decoration:none; transition:color .3s ease;
+        }
+        .btn-ghost:hover { color:var(--gold); }
+        .btn-ghost::after { content:''; display:block; width:34px; height:1px; background:currentColor; transition:width .35s ease; }
+        .btn-ghost:hover::after { width:54px; }
+        /* scroll indicator */
         .hero-scroll {
-            position: absolute; bottom: 48px; left: 50%; transform: translateX(-50%);
-            display: flex; flex-direction: column; align-items: center; gap: 8px;
-            opacity: 0; animation: fadeIn 1s ease 1.5s forwards;
+            position:absolute; bottom:36px; left:50%; transform:translateX(-50%);
+            display:flex; flex-direction:column; align-items:center; gap:8px; z-index:3;
+            opacity:0; animation:aFadeIn .9s ease 1.6s forwards;
         }
-        .hero-scroll span { font-size: 0.55rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gray); writing-mode: vertical-lr; }
-        .scroll-line { width: 1px; height: 60px; background: linear-gradient(to bottom, var(--gold), transparent); animation: scrollLine 2s ease infinite; }
-        @keyframes scrollLine {
-            0%   { transform: scaleY(0); transform-origin: top; opacity: 1; }
-            50%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
-            51%  { transform: scaleY(1); transform-origin: bottom; }
-            100% { transform: scaleY(0); transform-origin: bottom; opacity: 0; }
-        }
-        @keyframes fadeUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
-        @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+        .hero-scroll span { font-size:.52rem; letter-spacing:.32em; text-transform:uppercase; color:var(--gray); }
+        .scroll-line { width:1px; height:56px; background:linear-gradient(to bottom,var(--gold),transparent); animation:aScrollLine 2.2s ease infinite; }
 
-        section { padding: 120px 60px; }
-        .section-label {
-            font-family: var(--font-sans); font-size: 0.6rem; font-weight: 500;
-            letter-spacing: 0.4em; text-transform: uppercase; color: var(--gold);
-            margin-bottom: 20px; display: flex; align-items: center; gap: 16px;
+        /* ── SECTION SHARED ── */
+        section { padding:120px 64px; }
+        .sec-label {
+            font-family:var(--font-sans); font-size:.58rem; font-weight:500;
+            letter-spacing:.42em; text-transform:uppercase; color:var(--gold);
+            margin-bottom:18px; display:flex; align-items:center; gap:14px;
         }
-        .section-label::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
-        .section-title { font-family: var(--font-serif); font-size: clamp(2.2rem,4vw,3.8rem); font-weight: 300; line-height: 1.1; margin-bottom: 24px; }
-        .section-title em { font-style: italic; color: var(--gold); }
-        .reveal { opacity: 0; transform: translateY(40px); transition: opacity 0.8s ease, transform 0.8s ease; }
-        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .sec-label::before { content:''; display:block; width:32px; height:1px; background:var(--gold); }
+        .sec-title { font-family:var(--font-serif); font-size:clamp(2rem,4vw,3.8rem); font-weight:300; line-height:1.1; margin-bottom:20px; }
+        .sec-title em { font-style:italic; color:var(--gold); }
+        .sec-subtitle { font-size:.85rem; color:var(--gray); line-height:2; }
+        /* reveal */
+        .reveal { opacity:0; transform:translateY(38px); transition:opacity .8s ease,transform .8s ease; }
+        .reveal.in { opacity:1; transform:translateY(0); }
 
+        /* ── ABOUT ── */
         #about {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 100px;
-            align-items: center; border-top: 1px solid rgba(201,168,76,0.1);
+            display:grid; grid-template-columns:1fr 1fr; gap:100px; align-items:center;
+            border-top:1px solid rgba(201,168,76,.1);
         }
-        .about-image-wrap { position: relative; }
-        .about-image-wrap::before {
-            content: ''; position: absolute; top: 24px; right: -24px; bottom: -24px; left: 24px;
-            border: 1px solid rgba(201,168,76,0.2); z-index: 0;
+        .about-img-wrap { position:relative; }
+        .about-img-wrap::after {
+            content:''; position:absolute; top:24px; right:-24px; bottom:-24px; left:24px;
+            border:1px solid rgba(201,168,76,.18); pointer-events:none;
         }
-        .about-image { position: relative; z-index: 1; width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; }
-        .about-image-placeholder {
-            position: relative; z-index: 1; width: 100%; aspect-ratio: 3/4;
-            background: var(--dark-3); display: flex; align-items: center; justify-content: center;
-            font-family: var(--font-serif); font-size: 1rem; color: var(--gray); letter-spacing: 0.1em;
+        .about-img { width:100%; aspect-ratio:3/4; object-fit:cover; display:block; position:relative; z-index:1; }
+        .about-img-ph {
+            width:100%; aspect-ratio:3/4; background:var(--dark-3); position:relative; z-index:1;
+            display:flex; align-items:center; justify-content:center;
+            font-family:var(--font-serif); font-size:.95rem; color:var(--gray); letter-spacing:.1em;
         }
-        .about-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; margin-top: 48px; }
-        .stat { background: var(--dark-2); padding: 28px; border: 1px solid rgba(201,168,76,0.08); }
-        .stat-number { font-family: var(--font-serif); font-size: 2.8rem; font-weight: 300; color: var(--gold); line-height: 1; margin-bottom: 8px; }
-        .stat-label { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gray); }
-        .about-text p { font-size: 0.9rem; line-height: 2; color: var(--gray-light); margin-bottom: 20px; }
-        .about-text p:first-of-type { font-family: var(--font-serif); font-size: 1.3rem; line-height: 1.8; color: var(--white); font-weight: 300; }
-        .about-signature { font-family: var(--font-serif); font-size: 2rem; font-style: italic; color: var(--gold); margin-top: 40px; }
+        .about-stats { display:grid; grid-template-columns:1fr 1fr; gap:2px; margin-top:40px; }
+        .stat { background:var(--dark-2); padding:26px; border:1px solid rgba(201,168,76,.07); }
+        .stat-n { font-family:var(--font-serif); font-size:2.6rem; color:var(--gold); line-height:1; margin-bottom:6px; }
+        .stat-l { font-size:.58rem; font-weight:500; letter-spacing:.2em; text-transform:uppercase; color:var(--gray); }
+        .about-text p { font-size:.88rem; line-height:2; color:var(--gray-light); margin-bottom:18px; }
+        .about-text p.lead { font-family:var(--font-serif); font-size:1.25rem; line-height:1.8; color:var(--white); }
+        .about-sig { font-family:var(--font-serif); font-size:2rem; font-style:italic; color:var(--gold); margin-top:38px; }
 
-        #portfolio { background: var(--dark); border-top: 1px solid rgba(201,168,76,0.1); }
-        .portfolio-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 60px; }
-        .portfolio-filters { display: flex; gap: 4px; flex-wrap: wrap; }
-        .filter-btn {
-            background: none; border: 1px solid rgba(201,168,76,0.15); color: var(--gray);
-            font-family: var(--font-sans); font-size: 0.6rem; font-weight: 500;
-            letter-spacing: 0.2em; text-transform: uppercase; padding: 10px 20px;
-            cursor: pointer; transition: var(--transition);
+        /* ── PORTFOLIO ── */
+        #portfolio { background:var(--dark); border-top:1px solid rgba(201,168,76,.1); }
+        .port-header { display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:70px; flex-wrap:wrap; gap:24px; }
+        .port-filters { display:flex; gap:4px; flex-wrap:wrap; }
+        .f-btn {
+            background:none; border:1px solid rgba(201,168,76,.18); color:var(--gray);
+            font-family:var(--font-sans); font-size:.6rem; font-weight:500;
+            letter-spacing:.2em; text-transform:uppercase; padding:10px 22px;
+            cursor:pointer; transition:var(--transition);
         }
-        .filter-btn:hover, .filter-btn.active { background: var(--gold); border-color: var(--gold); color: var(--black); }
-        .portfolio-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 3px; }
-        .portfolio-item { position: relative; overflow: hidden; aspect-ratio: 1; background: var(--dark-3); cursor: pointer; }
-        .portfolio-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.25,0.46,0.45,0.94); display: block; }
-        .portfolio-item:hover img { transform: scale(1.08); }
-        .portfolio-overlay {
-            position: absolute; inset: 0;
-            background: linear-gradient(to top, rgba(8,8,8,0.95) 0%, rgba(8,8,8,0.3) 50%, transparent 100%);
-            opacity: 0; transition: var(--transition);
-            display: flex; flex-direction: column; justify-content: flex-end; padding: 28px;
-        }
-        .portfolio-item:hover .portfolio-overlay { opacity: 1; }
-        .portfolio-overlay h3 { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 300; margin-bottom: 6px; }
-        .portfolio-overlay span { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
-        .portfolio-zoom {
-            position: absolute; top: 20px; right: 20px; width: 44px; height: 44px;
-            border: 1px solid rgba(255,255,255,0.3); display: flex; align-items: center; justify-content: center;
-            opacity: 0; transition: var(--transition);
-        }
-        .portfolio-item:hover .portfolio-zoom { opacity: 1; }
-        .portfolio-zoom svg { width: 16px; height: 16px; stroke: white; fill: none; }
-        .portfolio-placeholder {
-            width: 100%; height: 100%; display: flex; align-items: center; justify-content: center;
-            font-family: var(--font-serif); font-size: 0.8rem; color: var(--gray); letter-spacing: 0.1em;
-        }
+        .f-btn:hover,.f-btn.active { background:var(--gold); border-color:var(--gold); color:var(--black); }
 
+        /* ── HEX GRID (COLMEIA) ── */
+        .hex-stage {
+            display:flex; flex-direction:column; align-items:center;
+            gap:0;
+        }
+        .hex-row {
+            display:flex; justify-content:center;
+            gap:var(--hex-gap);
+        }
+        /* offset para encaixe colmeia */
+        .hex-row.offset {
+            margin-top:calc(var(--hex-h) * -0.2915);
+        }
+        /* item */
+        .hex-item {
+            position:relative;
+            width:var(--hex-w); height:var(--hex-h);
+            clip-path:polygon(50% 0%,100% 25%,100% 75%,50% 100%,0% 75%,0% 25%);
+            overflow:hidden; cursor:pointer; flex-shrink:0;
+            transition:transform .4s ease,filter .4s ease;
+        }
+        .hex-item:hover { transform:scale(1.05); filter:brightness(1.12); }
+        .hex-item img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s ease; }
+        .hex-item:hover img { transform:scale(1.12); }
+        .hex-ph {
+            width:100%; height:100%; background:var(--dark-3);
+            display:flex; align-items:center; justify-content:center; flex-direction:column; gap:8px;
+        }
+        .hex-ph-num { font-family:var(--font-serif); font-size:2rem; color:rgba(201,168,76,.25); }
+        .hex-ph-txt { font-size:.55rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gray); }
+        .hex-ov {
+            position:absolute; inset:0;
+            background:linear-gradient(to top,rgba(8,8,8,.94) 0%,rgba(8,8,8,.25) 55%,transparent 100%);
+            opacity:0; transition:opacity .4s ease;
+            display:flex; flex-direction:column; justify-content:flex-end; align-items:center;
+            text-align:center; padding:0 14px 26px;
+        }
+        .hex-item:hover .hex-ov { opacity:1; }
+        .hex-ov h3 { font-family:var(--font-serif); font-size:1.05rem; font-weight:300; margin-bottom:4px; }
+        .hex-ov span { font-size:.56rem; font-weight:500; letter-spacing:.2em; text-transform:uppercase; color:var(--gold); }
+        /* lightbox */
         .lightbox {
-            position: fixed; inset: 0; background: rgba(0,0,0,0.97); z-index: 10000;
-            display: flex; align-items: center; justify-content: center;
-            opacity: 0; pointer-events: none; transition: opacity 0.4s ease;
+            position:fixed; inset:0; background:rgba(0,0,0,.97); z-index:10000;
+            display:flex; align-items:center; justify-content:center;
+            opacity:0; pointer-events:none; transition:opacity .4s ease;
         }
-        .lightbox.active { opacity: 1; pointer-events: all; }
-        .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; }
-        .lightbox-close {
-            position: absolute; top: 32px; right: 32px; background: none;
-            border: 1px solid rgba(201,168,76,0.3); color: var(--gold);
-            font-family: var(--font-sans); font-size: 0.6rem; letter-spacing: 0.2em;
-            text-transform: uppercase; padding: 10px 20px; cursor: pointer; transition: var(--transition);
+        .lightbox.open { opacity:1; pointer-events:all; }
+        .lightbox img { max-width:90vw; max-height:90vh; object-fit:contain; }
+        .lb-close {
+            position:absolute; top:28px; right:28px;
+            background:none; border:1px solid rgba(201,168,76,.3);
+            color:var(--gold); font-family:var(--font-sans); font-size:.6rem;
+            letter-spacing:.2em; text-transform:uppercase; padding:10px 22px;
+            cursor:pointer; transition:var(--transition);
         }
-        .lightbox-close:hover { background: var(--gold); color: var(--black); }
+        .lb-close:hover { background:var(--gold); color:var(--black); }
 
-        #process { border-top: 1px solid rgba(201,168,76,0.1); }
-        .process-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 2px; margin-top: 80px; }
-        .process-item {
-            background: var(--dark-2); padding: 48px 36px;
-            border: 1px solid rgba(201,168,76,0.06); position: relative; overflow: hidden; transition: var(--transition);
+        /* ── PROCESS ── */
+        #process { border-top:1px solid rgba(201,168,76,.1); }
+        .process-header { text-align:center; max-width:580px; margin:0 auto 80px; }
+        .process-header .sec-label { justify-content:center; }
+        .proc-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:2px; }
+        .proc-card {
+            background:var(--dark-2); padding:48px 34px;
+            border:1px solid rgba(201,168,76,.06); position:relative; overflow:hidden;
+            transition:background .4s ease;
         }
-        .process-item::before { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transition: transform 0.4s ease; }
-        .process-item:hover { background: var(--dark-3); }
-        .process-item:hover::before { transform: scaleX(1); }
-        .process-number { font-family: var(--font-serif); font-size: 5rem; font-weight: 300; color: rgba(201,168,76,0.08); line-height: 1; margin-bottom: 32px; }
-        .process-icon { width: 48px; height: 48px; margin-bottom: 24px; }
-        .process-icon svg { width: 100%; height: 100%; stroke: var(--gold); fill: none; stroke-width: 1.5; }
-        .process-item h3 { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 300; margin-bottom: 16px; }
-        .process-item p { font-size: 0.8rem; line-height: 1.8; color: var(--gray); }
+        .proc-card::after { content:''; position:absolute; bottom:0; left:0; right:0; height:2px; background:var(--gold); transform:scaleX(0); transition:transform .4s ease; }
+        .proc-card:hover { background:var(--dark-3); }
+        .proc-card:hover::after { transform:scaleX(1); }
+        .proc-num { font-family:var(--font-serif); font-size:5rem; color:rgba(201,168,76,.07); line-height:1; margin-bottom:28px; }
+        .proc-icon { width:44px; height:44px; margin-bottom:20px; }
+        .proc-icon svg { width:100%; height:100%; stroke:var(--gold); fill:none; stroke-width:1.5; }
+        .proc-card h3 { font-family:var(--font-serif); font-size:1.35rem; font-weight:300; margin-bottom:14px; }
+        .proc-card p  { font-size:.78rem; line-height:1.9; color:var(--gray); }
 
-        #contact { background: var(--dark); border-top: 1px solid rgba(201,168,76,0.1); }
-        .contact-wrap { display: grid; grid-template-columns: 1fr 1.2fr; gap: 100px; align-items: start; margin-top: 80px; }
-        .contact-info h3 { font-family: var(--font-serif); font-size: 1.8rem; font-weight: 300; margin-bottom: 24px; line-height: 1.4; }
-        .contact-info p { font-size: 0.8rem; line-height: 2; color: var(--gray); margin-bottom: 48px; }
-        .contact-details { display: flex; flex-direction: column; gap: 20px; }
-        .contact-detail { display: flex; align-items: flex-start; gap: 20px; }
-        .contact-detail-icon { width: 44px; height: 44px; border: 1px solid rgba(201,168,76,0.2); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-        .contact-detail-icon svg { width: 18px; height: 18px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
-        .contact-detail-text span { display: block; font-size: 0.55rem; font-weight: 500; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
-        .contact-detail-text p { font-size: 0.85rem; color: var(--gray-light); margin: 0; }
-
-        .form-success-msg { display: none; background: rgba(201,168,76,0.06); border: 1px solid rgba(201,168,76,0.3); padding: 40px; text-align: center; }
-        .form-success-msg svg { width: 48px; height: 48px; stroke: var(--gold); fill: none; stroke-width: 1.5; margin-bottom: 20px; }
-        .form-success-msg h4 { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 300; margin-bottom: 12px; }
-        .form-success-msg p { font-size: 0.8rem; color: var(--gray); line-height: 1.8; }
-        .form-global-error { display: none; background: rgba(255,80,80,0.06); border: 1px solid rgba(255,80,80,0.3); color: #ff8080; font-size: 0.75rem; letter-spacing: 0.05em; padding: 16px 20px; margin-bottom: 20px; }
-
-        .contact-form { display: flex; flex-direction: column; gap: 20px; }
-        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .form-group { display: flex; flex-direction: column; gap: 8px; }
-        .form-group label { font-size: 0.6rem; font-weight: 500; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); }
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            background: rgba(255,255,255,0.03); border: 1px solid rgba(201,168,76,0.15);
-            color: var(--white); font-family: var(--font-sans); font-size: 0.8rem; font-weight: 300;
-            padding: 16px 20px; outline: none; transition: var(--transition); width: 100%; -webkit-appearance: none;
+        /* ── CONTACT ── */
+        #contact { background:var(--dark); border-top:1px solid rgba(201,168,76,.1); }
+        .cont-header { text-align:center; max-width:600px; margin:0 auto 80px; }
+        .cont-header .sec-label { justify-content:center; }
+        .cont-wrap { display:grid; grid-template-columns:1fr 1.3fr; gap:100px; align-items:start; }
+        .cont-info h3 { font-family:var(--font-serif); font-size:1.9rem; font-weight:300; margin-bottom:20px; line-height:1.4; }
+        .cont-info h3 em { font-style:italic; color:var(--gold); }
+        .cont-info .desc { font-size:.82rem; line-height:2; color:var(--gray); margin-bottom:44px; }
+        .cont-details { display:flex; flex-direction:column; gap:20px; }
+        .cont-det { display:flex; align-items:flex-start; gap:18px; }
+        .det-icon { width:44px; height:44px; border:1px solid rgba(201,168,76,.2); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+        .det-icon svg { width:18px; height:18px; stroke:var(--gold); fill:none; stroke-width:1.5; }
+        .det-txt span { display:block; font-size:.54rem; font-weight:500; letter-spacing:.26em; text-transform:uppercase; color:var(--gold); margin-bottom:4px; }
+        .det-txt p { font-size:.84rem; color:var(--gray-light); margin:0; }
+        /* form */
+        .form-success {
+            display:none; background:rgba(201,168,76,.05); border:1px solid rgba(201,168,76,.25);
+            padding:44px; text-align:center;
         }
-        .form-group select {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C9A84C' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
-            background-repeat: no-repeat; background-position: right 20px center; padding-right: 48px; cursor: pointer;
+        .form-success svg { width:48px; height:48px; stroke:var(--gold); fill:none; stroke-width:1.5; margin-bottom:18px; }
+        .form-success h4 { font-family:var(--font-serif); font-size:1.6rem; font-weight:300; margin-bottom:12px; }
+        .form-success p  { font-size:.8rem; color:var(--gray); line-height:1.8; }
+        .form-gerr { display:none; background:rgba(255,80,80,.05); border:1px solid rgba(255,80,80,.3); color:#ff8080; font-size:.74rem; padding:16px 20px; margin-bottom:18px; letter-spacing:.04em; }
+        .contact-form { display:flex; flex-direction:column; gap:18px; }
+        .f-row { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+        .f-group { display:flex; flex-direction:column; gap:8px; }
+        .f-group label { font-size:.59rem; font-weight:500; letter-spacing:.26em; text-transform:uppercase; color:var(--gold); }
+        .f-group input,.f-group select,.f-group textarea {
+            background:rgba(255,255,255,.03); border:1px solid rgba(201,168,76,.15);
+            color:var(--white); font-family:var(--font-sans); font-size:.8rem; font-weight:300;
+            padding:15px 18px; outline:none; transition:var(--transition); width:100%; -webkit-appearance:none;
         }
-        .form-group select option { background: var(--dark-2); color: var(--white); }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); background: rgba(201,168,76,0.04); }
-        .form-group input[aria-invalid="true"], .form-group select[aria-invalid="true"], .form-group textarea[aria-invalid="true"] { border-color: rgba(255,80,80,0.6); }
-        .form-group textarea { resize: vertical; min-height: 140px; }
-        .field-error { font-size: 0.65rem; color: #ff8080; letter-spacing: 0.05em; min-height: 16px; display: block; }
-        .form-consent { display: flex; align-items: flex-start; gap: 12px; font-size: 0.7rem; color: var(--gray); line-height: 1.6; }
-        .form-consent input[type="checkbox"] { width: 16px; height: 16px; flex-shrink: 0; margin-top: 2px; accent-color: var(--gold); cursor: pointer; }
+        .f-group select {
+            background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C9A84C' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+            background-repeat:no-repeat; background-position:right 18px center; padding-right:44px; cursor:pointer;
+        }
+        .f-group select option { background:var(--dark-2); color:var(--white); }
+        .f-group input:focus,.f-group select:focus,.f-group textarea:focus { border-color:var(--gold); background:rgba(201,168,76,.04); }
+        .f-group input[aria-invalid],.f-group select[aria-invalid],.f-group textarea[aria-invalid] { border-color:rgba(255,80,80,.6); }
+        .f-group textarea { resize:vertical; min-height:130px; }
+        .f-err { font-size:.63rem; color:#ff8080; min-height:15px; display:block; letter-spacing:.03em; }
+        .f-consent { display:flex; align-items:flex-start; gap:12px; font-size:.7rem; color:var(--gray); line-height:1.6; }
+        .f-consent input[type=checkbox] { width:15px; height:15px; flex-shrink:0; margin-top:2px; accent-color:var(--gold); cursor:pointer; }
         .submit-btn {
-            display: flex; align-items: center; justify-content: center; gap: 12px;
-            padding: 20px 48px; background: var(--gold); color: var(--black);
-            font-family: var(--font-sans); font-size: 0.65rem; font-weight: 600;
-            letter-spacing: 0.25em; text-transform: uppercase; border: none; cursor: pointer;
-            transition: var(--transition); width: 100%;
+            display:flex; align-items:center; justify-content:center; gap:12px;
+            padding:19px 48px; background:var(--gold); color:var(--black);
+            font-family:var(--font-sans); font-size:.65rem; font-weight:600;
+            letter-spacing:.25em; text-transform:uppercase; border:none; cursor:pointer;
+            transition:var(--transition); width:100%; position:relative; overflow:hidden;
         }
-        .submit-btn:hover:not(:disabled) { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 16px 40px rgba(201,168,76,0.3); }
-        .submit-btn:disabled { opacity: 0.7; cursor: not-allowed; transform: none; }
-        .btn-spinner { display: none; width: 16px; height: 16px; border: 2px solid rgba(0,0,0,0.2); border-top-color: var(--black); border-radius: 50%; animation: spin 0.7s linear infinite; }
-        @keyframes spin { to { transform: rotate(360deg); } }
+        .submit-btn::before { content:''; position:absolute; inset:0; background:var(--gold-light); transform:scaleX(0); transform-origin:left; transition:transform .4s ease; }
+        .submit-btn:hover:not(:disabled)::before { transform:scaleX(1); }
+        .submit-btn span,.submit-btn .spinner { position:relative; z-index:1; }
+        .submit-btn:disabled { opacity:.7; cursor:not-allowed; }
+        .spinner { display:none; width:16px; height:16px; border:2px solid rgba(0,0,0,.2); border-top-color:var(--black); border-radius:50%; animation:aSpin .7s linear infinite; }
 
-        footer { background: var(--black); border-top: 1px solid rgba(201,168,76,0.1); padding: 60px; }
-        .footer-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px; }
-        .footer-logo { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 300; letter-spacing: 0.15em; color: var(--white); text-decoration: none; }
-        .footer-logo span { color: var(--gold); }
-        .footer-copy { font-size: 0.65rem; color: var(--gray); letter-spacing: 0.1em; }
-        .footer-social { display: flex; gap: 20px; }
-        .footer-social a { width: 40px; height: 40px; border: 1px solid rgba(201,168,76,0.2); display: flex; align-items: center; justify-content: center; color: var(--gray); text-decoration: none; transition: var(--transition); }
-        .footer-social a:hover { border-color: var(--gold); color: var(--gold); }
-        .footer-social svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 1.5; }
+        /* ── FOOTER ── */
+        footer { background:var(--black); border-top:1px solid rgba(201,168,76,.1); padding:64px; }
+        .foot-inner { display:flex; flex-direction:column; align-items:center; gap:30px; text-align:center; }
+        .foot-logo { text-decoration:none; display:inline-block; }
+        .foot-logo img { object-fit:contain; display:block; }
+        .foot-logo-txt { font-family:var(--font-serif); font-size:1.45rem; font-weight:300; letter-spacing:.14em; color:var(--white); }
+        .foot-logo-txt b { color:var(--gold); font-weight:300; }
+        .foot-div { width:80px; height:1px; background:rgba(201,168,76,.3); }
+        .foot-social { display:flex; gap:14px; }
+        .foot-social a { width:40px; height:40px; border:1px solid rgba(201,168,76,.2); display:flex; align-items:center; justify-content:center; color:var(--gray); transition:var(--transition); }
+        .foot-social a:hover { border-color:var(--gold); color:var(--gold); background:rgba(201,168,76,.05); }
+        .foot-social svg { width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:1.5; }
+        .foot-copy { font-size:.6rem; color:var(--gray); letter-spacing:.15em; }
 
-        @media (max-width: 1024px) {
-            nav { padding: 24px 40px; } nav.scrolled { padding: 16px 40px; }
-            .nav-links { display: none; } .hamburger { display: flex; }
-            section { padding: 80px 40px; } #hero { padding: 0 40px; }
-            #about { grid-template-columns: 1fr; gap: 60px; }
-            .contact-wrap { grid-template-columns: 1fr; gap: 60px; }
-            .process-grid { grid-template-columns: repeat(2,1fr); }
+        /* ── KEYFRAMES ── */
+        @keyframes aFadeUp    { from{opacity:0;transform:translateY(32px)} to{opacity:1;transform:none} }
+        @keyframes aFadeDown  { from{opacity:0;transform:translateY(-20px)} to{opacity:1;transform:none} }
+        @keyframes aFadeIn    { from{opacity:0} to{opacity:1} }
+        @keyframes aSpin      { to{transform:rotate(360deg)} }
+        @keyframes aScrollLine{
+            0%   {transform:scaleY(0);transform-origin:top;   opacity:1}
+            50%  {transform:scaleY(1);transform-origin:top;   opacity:1}
+            51%  {transform:scaleY(1);transform-origin:bottom}
+            100% {transform:scaleY(0);transform-origin:bottom;opacity:0}
         }
-        @media (max-width: 768px) {
-            nav { padding: 20px 24px; } nav.scrolled { padding: 14px 24px; }
-            section { padding: 70px 24px; } #hero { padding: 0 24px; }
-            footer { padding: 40px 24px; }
-            .footer-inner { flex-direction: column; text-align: center; }
-            .portfolio-grid { grid-template-columns: repeat(2,1fr); }
-            .portfolio-header { flex-direction: column; align-items: flex-start; gap: 28px; }
-            .form-row { grid-template-columns: 1fr; }
-            .process-grid { grid-template-columns: 1fr; }
-            .hero-actions { flex-direction: column; align-items: flex-start; }
-            body { cursor: auto; } .cursor, .cursor-follower { display: none; }
+
+        /* ── RESPONSIVE ── */
+        @media(max-width:1280px){
+            :root{--hex-w:175px}
+            section{padding:100px 48px}
+            #hero{padding:110px 48px 90px}
         }
-        @media (max-width: 480px) {
-            .portfolio-grid { grid-template-columns: 1fr; }
-            .about-stats { grid-template-columns: 1fr; }
+        @media(max-width:1024px){
+            nav{padding:18px 40px}
+            nav.scrolled{padding:12px 40px}
+            .nav-links{display:none}
+            .hamburger{display:flex}
+            section{padding:80px 40px}
+            #hero{padding:100px 40px 80px}
+            .hero-vline{display:none}
+            #about{grid-template-columns:1fr;gap:60px}
+            .cont-wrap{grid-template-columns:1fr;gap:60px}
+            .proc-grid{grid-template-columns:repeat(2,1fr)}
+            :root{--hex-w:155px}
+        }
+        @media(max-width:768px){
+            nav{padding:16px 24px}
+            section{padding:70px 24px}
+            #hero{padding:100px 24px 70px}
+            footer{padding:48px 24px}
+            .port-header{flex-direction:column;align-items:flex-start}
+            .f-row{grid-template-columns:1fr}
+            .proc-grid{grid-template-columns:1fr}
+            .hero-actions{flex-direction:column;align-items:center}
+            body{cursor:auto}
+            .cursor,.cursor-follower{display:none}
+            :root{--hex-w:120px;--hex-gap:5px}
+        }
+        @media(max-width:520px){
+            :root{--hex-w:95px;--hex-gap:4px}
+            .about-stats{grid-template-columns:1fr}
+        }
+        @media(max-width:380px){
+            :root{--hex-w:80px;--hex-gap:3px}
         }
     </style>
 </head>
 <body>
 
-    <div class="cursor" id="cursor"></div>
-    <div class="cursor-follower" id="cursorFollower"></div>
+<!-- CURSOR -->
+<div class="cursor"  id="cur"></div>
+<div class="cursor-follower" id="curF"></div>
 
-    <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightboxClose">Fechar ✕</button>
-        <img src="" alt="" id="lightboxImg">
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lb">
+    <button class="lb-close" id="lbClose">Fechar ✕</button>
+    <img src="" alt="" id="lbImg">
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+    <a href="#hero" class="nav-logo" id="navLogo"></a>
+    <ul class="nav-links">
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#process">Processo</a></li>
+        <li><a href="#contact" class="nav-cta">Agendar</a></li>
+    </ul>
+    <div class="hamburger" id="ham"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mob-menu" id="mobMenu">
+    <a href="#about"     class="mob-lnk">Sobre</a>
+    <a href="#portfolio" class="mob-lnk">Portfólio</a>
+    <a href="#process"   class="mob-lnk">Processo</a>
+    <a href="#contact"   class="mob-lnk">Agendar</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-overlay" id="heroOv"></div>
+    <div class="hero-vline"></div>
+    <div class="hero-vline"></div>
+    <div class="hero-content">
+        <div class="hero-logo" id="heroLogo"></div>
+        <p class="hero-eyebrow" id="heroEye"></p>
+        <h1 class="hero-title" id="heroTitle"></h1>
+        <p class="hero-sub" id="heroSub"></p>
+        <div class="hero-actions">
+            <a href="#contact" class="btn-gold"><span id="heroBt1"></span></a>
+            <a href="#portfolio" class="btn-ghost" id="heroBt2"></a>
+        </div>
     </div>
-
-    <!-- NAVBAR (preenchida pelo JS) -->
-    <nav id="navbar">
-        <a href="#hero" class="nav-logo" id="navLogo"></a>
-        <ul class="nav-links">
-            <li><a href="#about">Sobre</a></li>
-            <li><a href="#portfolio">Portfólio</a></li>
-            <li><a href="#process">Processo</a></li>
-            <li><a href="#contact" class="nav-cta">Agendar</a></li>
-        </ul>
-        <div class="hamburger" id="hamburger">
-            <span></span><span></span><span></span>
-        </div>
-    </nav>
-
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="#about"     class="mobile-link">Sobre</a>
-        <a href="#portfolio" class="mobile-link">Portfólio</a>
-        <a href="#process"   class="mobile-link">Processo</a>
-        <a href="#contact"   class="mobile-link">Agendar</a>
+    <div class="hero-scroll">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
     </div>
+</section>
 
-    <!-- HERO (preenchido pelo JS) -->
-    <section id="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-line"></div>
-        <div class="hero-line"></div>
-        <div class="hero-content">
-            <p class="hero-eyebrow" id="heroEyebrow"></p>
-            <h1 class="hero-title" id="heroTitle"></h1>
-            <p class="hero-subtitle" id="heroSubtitle"></p>
-            <div class="hero-actions">
-                <a href="#contact" class="btn-primary">Agendar Consulta</a>
-                <a href="#portfolio" class="btn-secondary">Ver Portfólio</a>
-            </div>
-        </div>
-        <div class="hero-scroll">
-            <div class="scroll-line"></div>
-            <span>Scroll</span>
-        </div>
-    </section>
+<!-- ABOUT -->
+<section id="about">
+    <div class="about-img-wrap reveal">
+        <div id="aboutImg"></div>
+        <div class="about-stats" id="aboutStats"></div>
+    </div>
+    <div class="about-text reveal">
+        <p class="sec-label">Sobre Mim</p>
+        <h2 class="sec-title" id="aboutTitle"></h2>
+        <p class="lead" id="aboutP1"></p>
+        <p id="aboutP2"></p>
+        <div class="about-sig" id="aboutSig"></div>
+    </div>
+</section>
 
-    <!-- ABOUT (preenchido pelo JS) -->
-    <section id="about">
-        <div class="about-image-wrap reveal">
-            <div id="aboutImageContainer"></div>
-            <div class="about-stats" id="aboutStats"></div>
+<!-- PORTFOLIO -->
+<section id="portfolio">
+    <div class="port-header reveal">
+        <div>
+            <p class="sec-label">Trabalhos Recentes</p>
+            <h2 class="sec-title">Meu <em>Portfólio</em></h2>
         </div>
-        <div class="about-text reveal">
-            <p class="section-label">Sobre Mim</p>
-            <h2 class="section-title" id="aboutTitle"></h2>
-            <p id="aboutP1"></p>
-            <p id="aboutP2"></p>
-            <div class="about-signature" id="aboutSignature"></div>
-        </div>
-    </section>
+        <div class="port-filters" id="portFilters"></div>
+    </div>
+    <div class="hex-stage" id="hexStage"></div>
+</section>
 
-    <!-- PORTFOLIO (preenchido pelo JS) -->
-    <section id="portfolio">
-        <div class="portfolio-header reveal">
-            <div>
-                <p class="section-label">Trabalhos Recentes</p>
-                <h2 class="section-title">Meu <em>Portfólio</em></h2>
-            </div>
-            <div class="portfolio-filters" id="portfolioFilters"></div>
-        </div>
-        <div class="portfolio-grid" id="portfolioGrid"></div>
-    </section>
+<!-- PROCESS -->
+<section id="process">
+    <div class="process-header reveal">
+        <p class="sec-label">Como Funciona</p>
+        <h2 class="sec-title" id="procTitle"></h2>
+        <p class="sec-subtitle" id="procSub"></p>
+    </div>
+    <div class="proc-grid" id="procGrid"></div>
+</section>
 
-    <!-- PROCESS -->
-    <section id="process">
-        <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto;">
-            <p class="section-label" style="justify-content:center;">Como Funciona</p>
-            <h2 class="section-title">O <em>Processo</em></h2>
-            <p style="font-size:0.85rem;color:var(--gray);line-height:2;">Do primeiro contato à tatuagem finalizada, cada etapa é cuidadosamente planejada para garantir o melhor resultado.</p>
+<!-- CONTACT -->
+<section id="contact">
+    <div class="cont-header reveal">
+        <p class="sec-label">Vamos Criar Juntos</p>
+        <h2 class="sec-title">Agende sua <em>Consulta</em></h2>
+        <p class="sec-subtitle">Preencha o formulário e entrarei em contato em até 48 horas.</p>
+    </div>
+    <div class="cont-wrap">
+        <div class="cont-info reveal">
+            <h3 id="contTitle"></h3>
+            <p class="desc" id="contDesc"></p>
+            <div class="cont-details" id="contDet"></div>
         </div>
-        <div class="process-grid">
-            <div class="process-item reveal">
-                <div class="process-number">01</div>
-                <div class="process-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
-                <h3>Consulta Inicial</h3>
-                <p>Conversamos sobre sua ideia, referências, posicionamento e estilo desejado. Tudo começa com uma boa conversa.</p>
+        <div class="reveal">
+            <div class="form-success" id="fSuccess">
+                <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <h4>Mensagem Enviada!</h4>
+                <p>Obrigado pelo contato. Responderei em até 48 horas.</p>
             </div>
-            <div class="process-item reveal">
-                <div class="process-number">02</div>
-                <div class="process-icon"><svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
-                <h3>Design Exclusivo</h3>
-                <p>Crio um design único baseado nas suas referências. Você verá o projeto antes de qualquer agulha.</p>
-            </div>
-            <div class="process-item reveal">
-                <div class="process-number">03</div>
-                <div class="process-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-                <h3>Sessão de Tatuagem</h3>
-                <p>Em um ambiente limpo e confortável, transformamos o design em arte permanente com atenção aos detalhes.</p>
-            </div>
-            <div class="process-item reveal">
-                <div class="process-number">04</div>
-                <div class="process-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
-                <h3>Cicatrização & Retoque</h3>
-                <p>Orientações completas de cicatrização e retoque gratuito se necessário.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT (preenchido pelo JS) -->
-    <section id="contact">
-        <div style="text-align:center;max-width:600px;margin:0 auto;" class="reveal">
-            <p class="section-label" style="justify-content:center;">Vamos Criar Juntos</p>
-            <h2 class="section-title">Agende sua <em>Consulta</em></h2>
-            <p style="font-size:0.85rem;color:var(--gray);line-height:2;">Preencha o formulário abaixo e entrarei em contato em até 48 horas para conversarmos sobre o seu projeto.</p>
-        </div>
-        <div class="contact-wrap">
-            <div class="contact-info reveal">
-                <h3>Pronto para eternizar<br>sua <em style="font-style:italic;color:var(--gold)">história na pele?</em></h3>
-                <p>Cada tatuagem é uma colaboração entre artista e cliente. Quanto mais você compartilha, mais especial será o resultado.</p>
-                <div class="contact-details" id="contactDetails"></div>
-            </div>
-            <div class="contact-form-wrap reveal">
-                <div class="form-success-msg" id="formSuccess">
-                    <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                    <h4>Mensagem Enviada!</h4>
-                    <p>Obrigado pelo contato. Responderei em até 48 horas.</p>
-                </div>
-                <div class="form-global-error" id="formGlobalError"></div>
-                <form class="contact-form" id="contactForm" novalidate>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="name">Nome Completo *</label>
-                            <input type="text" id="name" name="name" placeholder="Seu nome" required>
-                            <span class="field-error" id="err-name"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-mail *</label>
-                            <input type="email" id="email" name="email" placeholder="seu@email.com" required>
-                            <span class="field-error" id="err-email"></span>
-                        </div>
+            <div class="form-gerr" id="fGErr"></div>
+            <form class="contact-form" id="contactForm" novalidate>
+                <div class="f-row">
+                    <div class="f-group">
+                        <label for="fname">Nome Completo *</label>
+                        <input type="text" id="fname" name="name" placeholder="Seu nome" required>
+                        <span class="f-err" id="eN"></span>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="phone">WhatsApp</label>
-                            <input type="tel" id="phone" name="phone" placeholder="+55 (11) 9XXXX-XXXX">
-                            <span class="field-error" id="err-phone"></span>
-                        </div>
-                        <div class="form-group">
-                            <label for="style">Estilo Desejado *</label>
-                            <select id="style" name="style" required>
-                                <option value="" disabled selected>Selecione...</option>
-                                <option value="Fine Line">Fine Line</option>
-                                <option value="Blackwork">Blackwork</option>
-                                <option value="Realismo">Realismo</option>
-                                <option value="Outro">Outro / Não sei ainda</option>
-                            </select>
-                            <span class="field-error" id="err-style"></span>
-                        </div>
+                    <div class="f-group">
+                        <label for="femail">E-mail *</label>
+                        <input type="email" id="femail" name="email" placeholder="seu@email.com" required>
+                        <span class="f-err" id="eE"></span>
                     </div>
-                    <div class="form-group">
-                        <label for="placement">Localização no Corpo</label>
-                        <input type="text" id="placement" name="placement" placeholder="Ex: antebraço esquerdo, costela...">
+                </div>
+                <div class="f-row">
+                    <div class="f-group">
+                        <label for="fphone">WhatsApp</label>
+                        <input type="tel" id="fphone" name="phone" placeholder="+55 (11) 9XXXX-XXXX">
+                        <span class="f-err" id="eP"></span>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Descreva sua Ideia *</label>
-                        <textarea id="message" name="message" placeholder="Conte sobre a tatuagem que você quer, referências, significado..." required></textarea>
-                        <span class="field-error" id="err-message"></span>
+                    <div class="f-group">
+                        <label for="fstyle">Estilo Desejado *</label>
+                        <select id="fstyle" name="style" required>
+                            <option value="" disabled selected>Selecione...</option>
+                            <option>Fine Line</option>
+                            <option>Blackwork</option>
+                            <option>Realismo</option>
+                            <option>Outro / Não sei ainda</option>
+                        </select>
+                        <span class="f-err" id="eS"></span>
                     </div>
-                    <div class="form-consent">
-                        <input type="checkbox" id="consent" name="consent" required>
-                        <label for="consent">Concordo em receber resposta por e-mail referente ao meu projeto de tatuagem.</label>
-                    </div>
-                    <button type="submit" class="submit-btn" id="submitBtn">
-                        <span class="btn-text">Enviar Mensagem</span>
-                        <span class="btn-spinner" id="btnSpinner"></span>
-                    </button>
-                </form>
-            </div>
+                </div>
+                <div class="f-group">
+                    <label for="fplace">Localização no Corpo</label>
+                    <input type="text" id="fplace" name="placement" placeholder="Ex: antebraço esquerdo, costela...">
+                </div>
+                <div class="f-group">
+                    <label for="fmsg">Descreva sua Ideia *</label>
+                    <textarea id="fmsg" name="message" placeholder="Conte sobre a tatuagem, referências, significado..." required></textarea>
+                    <span class="f-err" id="eM"></span>
+                </div>
+                <div class="f-consent">
+                    <input type="checkbox" id="fcons" name="consent" required>
+                    <label for="fcons">Concordo em receber resposta por e-mail referente ao meu projeto de tatuagem.</label>
+                </div>
+                <button type="submit" class="submit-btn" id="subBtn">
+                    <span>Enviar Mensagem</span>
+                    <div class="spinner" id="spin"></div>
+                </button>
+            </form>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- FOOTER (preenchido pelo JS) -->
-    <footer>
-        <div class="footer-inner">
-            <a href="#hero" class="footer-logo" id="footerLogo"></a>
-            <p class="footer-copy" id="footerCopy"></p>
-            <div class="footer-social" id="footerSocial"></div>
-        </div>
-    </footer>
+<!-- FOOTER -->
+<footer>
+    <div class="foot-inner">
+        <a href="#hero" class="foot-logo" id="footLogo"></a>
+        <div class="foot-div"></div>
+        <div class="foot-social" id="footSoc"></div>
+        <p class="foot-copy" id="footCopy"></p>
+    </div>
+</footer>
 
-    <!-- Formspree AJAX CDN -->
-    <div data-fs-success style="display:none"></div>
-    <div data-fs-error style="display:none"></div>
-    <script>
-        window.formspree = window.formspree || function () {
-            (formspree.q = formspree.q || []).push(arguments);
-        };
-    </script>
-    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+<!-- ================================================================
+     MOTOR DO SITE — NÃO ALTERE NADA ABAIXO
+================================================================ -->
+<script>
+(function(){
+'use strict';
 
-    <!-- ============================================================
-         MOTOR DO SITE — NÃO ALTERE ABAIXO
-    ============================================================ -->
-    <script>
-    (function() {
+/* ── 1. CSS VARS ── */
+const S = document.documentElement.style;
+S.setProperty('--gold',       CONFIG.cor_dourado);
+S.setProperty('--gold-light', CONFIG.cor_dourado_claro);
+S.setProperty('--gold-dark',  CONFIG.cor_dourado_escuro);
+S.setProperty('--black',      CONFIG.cor_fundo);
+S.setProperty('--dark',       CONFIG.cor_escuro1);
+S.setProperty('--dark-2',     CONFIG.cor_escuro2);
+S.setProperty('--dark-3',     CONFIG.cor_escuro3);
+S.setProperty('--white',      CONFIG.cor_texto);
+S.setProperty('--gray',       CONFIG.cor_cinza);
+S.setProperty('--gray-light', CONFIG.cor_cinza_claro);
+S.setProperty('--font-serif', CONFIG.fonte_serif);
+S.setProperty('--font-sans',  CONFIG.fonte_sans);
+document.title = CONFIG.nome + ' — Tattoo Artist';
 
-        /* ── Aplica cores do CONFIG nas CSS vars ── */
-        const root = document.documentElement.style;
-        root.setProperty('--gold',       CONFIG.cor_dourado);
-        root.setProperty('--gold-light', CONFIG.cor_dourado_claro);
-        root.setProperty('--black',      CONFIG.cor_fundo);
-        root.setProperty('--white',      CONFIG.cor_texto);
+/* ── 2. LOGO helper ── */
+const [pNome,...rNome] = CONFIG.nome.split(' ');
+const rNomeStr = rNome.join(' ');
 
-        /* ── Título da página ── */
-        document.title = CONFIG.nome + ' — Tattoo Artist';
+function logoHTML(altura, type){
+    if(CONFIG.logo){
+        return `<img src="${CONFIG.logo}" alt="${CONFIG.logo_alt}" style="height:${altura}px;">`;
+    }
+    if(type === 'text-lg'){
+        return `<span class="hero-logo-txt">${CONFIG.nome}</span>`;
+    }
+    return `<span class="${type === 'foot' ? 'foot-logo-txt' : 'nav-logo-text'}">${pNome} <b>${rNomeStr}</b></span>`;
+}
 
-        /* ── NAVBAR logo ── */
-        const nomeParts = CONFIG.nome.split(' ');
-        const primeiroNome = nomeParts[0];
-        const restanteNome = nomeParts.slice(1).join(' ');
-        document.getElementById('navLogo').innerHTML =
-            primeiroNome + ' <span>' + restanteNome + '</span>';
+/* ── 3. NAV ── */
+document.getElementById('navLogo').innerHTML = logoHTML(CONFIG.logo_altura_nav,'nav');
 
-        /* ── HERO ── */
-        document.getElementById('heroEyebrow').textContent =
-            CONFIG.profissao + ' · ' + CONFIG.cidade + ', BR';
-        document.getElementById('heroTitle').innerHTML =
-            CONFIG.hero_linha1 + '<br><em>' + CONFIG.hero_linha2 + '</em>';
-        document.getElementById('heroSubtitle').textContent = CONFIG.hero_subtitulo;
+/* ── 4. HERO VIDEO / BG ── */
+const heroBg = document.getElementById('heroBg');
+if(CONFIG.video_fundo){
+    heroBg.innerHTML = `<video autoplay muted loop playsinline preload="auto" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
+        <source src="${CONFIG.video_fundo}" type="video/mp4">
+    </video>`;
+} else {
+    heroBg.innerHTML = `<div class="hero-gradient" style="position:absolute;inset:0;background:linear-gradient(135deg,${CONFIG.video_fallback_cor1} 0%,${CONFIG.video_fallback_cor2} 100%);"></div>`;
+}
+document.getElementById('heroOv').style.background = `rgba(0,0,0,${CONFIG.video_overlay})`;
 
-        /* ── ABOUT — imagem ── */
-        const imgContainer = document.getElementById('aboutImageContainer');
-        if (CONFIG.foto_perfil) {
-            imgContainer.innerHTML =
-                '<img src="' + CONFIG.foto_perfil + '" alt="' + CONFIG.nome + '" class="about-image">';
-        } else {
-            imgContainer.innerHTML =
-                '<div class="about-image-placeholder">Sua Foto Aqui</div>';
-        }
+/* ── 5. HERO LOGO ── */
+const heroLogo = document.getElementById('heroLogo');
+if(CONFIG.logo){
+    heroLogo.innerHTML = `<img src="${CONFIG.logo}" alt="${CONFIG.logo_alt}" style="height:${CONFIG.logo_altura_hero}px;width:auto;object-fit:contain;filter:drop-shadow(0 0 24px rgba(201,168,76,.4));">`;
+} else {
+    heroLogo.innerHTML = `<div class="hero-logo-txt">${CONFIG.nome}</div>`;
+}
 
-        /* ── ABOUT — stats ── */
-        const statsData = [
-            { num: CONFIG.stat_experiencia,  label: 'Anos de Experiência' },
-            { num: CONFIG.stat_tatuagens,    label: 'Tatuagens Realizadas' },
-            { num: CONFIG.stat_premiacoes,   label: 'Premiações' },
-            { num: CONFIG.stat_custom_label, label: CONFIG.stat_custom_text },
-        ];
-        document.getElementById('aboutStats').innerHTML = statsData.map(s =>
-            '<div class="stat"><div class="stat-number">' + s.num + '</div>' +
-            '<div class="stat-label">' + s.label + '</div></div>'
-        ).join('');
+/* ── 6. HERO TEXT ── */
+document.getElementById('heroEye').textContent   = `${CONFIG.profissao} · ${CONFIG.cidade}, ${CONFIG.estado}`;
+document.getElementById('heroTitle').innerHTML   = `${CONFIG.hero_linha1}<br><em>${CONFIG.hero_linha2}</em>`;
+document.getElementById('heroSub').textContent   = CONFIG.hero_subtitulo;
+document.getElementById('heroBt1').textContent   = CONFIG.hero_btn1;
+document.getElementById('heroBt2').textContent   = CONFIG.hero_btn2;
 
-        /* ── ABOUT — textos ── */
-        document.getElementById('aboutTitle').innerHTML =
-            CONFIG.sobre_titulo_parte1 + ' <em>' + CONFIG.sobre_titulo_parte2 + '</em>';
-        document.getElementById('aboutP1').textContent = CONFIG.sobre_paragrafo1;
-        document.getElementById('aboutP2').textContent = CONFIG.sobre_paragrafo2;
-        document.getElementById('aboutSignature').textContent = CONFIG.nome;
+/* ── 7. ABOUT IMAGE ── */
+document.getElementById('aboutImg').innerHTML = CONFIG.foto_perfil
+    ? `<img src="${CONFIG.foto_perfil}" alt="${CONFIG.nome}" class="about-img">`
+    : `<div class="about-img-ph">Sua Foto Aqui</div>`;
 
-        /* ── PORTFOLIO — filtros ── */
-        document.getElementById('portfolioFilters').innerHTML =
-            CONFIG.filtros.map((f, i) =>
-                '<button class="filter-btn' + (i === 0 ? ' active' : '') +
-                '" data-filter="' + f.valor + '">' + f.label + '</button>'
-            ).join('');
+/* ── 8. ABOUT STATS ── */
+document.getElementById('aboutStats').innerHTML = [
+    [CONFIG.stat_exp_numero,     CONFIG.stat_exp_label     ],
+    [CONFIG.stat_tattoos_numero, CONFIG.stat_tattoos_label  ],
+    [CONFIG.stat_premios_numero, CONFIG.stat_premios_label  ],
+    [CONFIG.stat_custom_numero,  CONFIG.stat_custom_label   ],
+].map(([n,l]) => `<div class="stat"><div class="stat-n">${n}</div><div class="stat-l">${l}</div></div>`).join('');
 
-        /* ── PORTFOLIO — items ── */
-        document.getElementById('portfolioGrid').innerHTML =
-            CONFIG.portfolio.map((item, i) => {
-                const media = item.foto
-                    ? '<img src="' + item.foto + '" alt="' + item.titulo + '">'
-                    : '<div class="portfolio-placeholder">Foto ' + (i + 1) + '</div>';
-                return '<div class="portfolio-item reveal" data-category="' + item.categoria +
-                    '" data-src="' + (item.foto || '') + '">' +
-                    media +
-                    '<div class="portfolio-overlay"><h3>' + item.titulo + '</h3><span>' + item.label + '</span></div>' +
-                    '<div class="portfolio-zoom"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/>' +
-                    '<path d="m21 21-4.35-4.35"/></svg></div></div>';
-            }).join('');
+/* ── 9. ABOUT TEXT ── */
+document.getElementById('aboutTitle').innerHTML  = `${CONFIG.sobre_titulo_parte1} <em>${CONFIG.sobre_titulo_parte2}</em>`;
+document.getElementById('aboutP1').textContent   = CONFIG.sobre_paragrafo1;
+document.getElementById('aboutP2').textContent   = CONFIG.sobre_paragrafo2;
+document.getElementById('aboutSig').textContent  = CONFIG.nome;
 
-        /* ── CONTACT — detalhes ── */
-        document.getElementById('contactDetails').innerHTML = `
-            <div class="contact-detail">
-                <div class="contact-detail-icon">
-                    <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                </div>
-                <div class="contact-detail-text">
-                    <span>Localização</span>
-                    <p>${CONFIG.cidade} — ${CONFIG.pais}</p>
-                </div>
-            </div>
-            <div class="contact-detail">
-                <div class="contact-detail-icon">
-                    <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                </div>
-                <div class="contact-detail-text">
-                    <span>Instagram</span>
-                    <p>${CONFIG.instagram_user}</p>
-                </div>
-            </div>
-            <div class="contact-detail">
-                <div class="contact-detail-icon">
-                    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.27a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
-                </div>
-                <div class="contact-detail-text">
-                    <span>WhatsApp</span>
-                    <p>${CONFIG.whatsapp_num}</p>
-                </div>
+/* ── 10. PORTFOLIO FILTERS ── */
+document.getElementById('portFilters').innerHTML = CONFIG.filtros.map((f,i) =>
+    `<button class="f-btn${i===0?' active':''}" data-f="${f.valor}">${f.label}</button>`
+).join('');
+
+/* ── 11. HEX GRID — colmeia 3+3+3 ── */
+function buildHex(){
+    const items = CONFIG.portfolio;
+    const rows  = [items.slice(0,3), items.slice(3,6), items.slice(6,9)];
+    return rows.map((row,ri) => {
+        const cells = row.map((it,ci) => {
+            const idx   = ri*3+ci;
+            const media = it.foto
+                ? `<img src="${it.foto}" alt="${it.titulo}" loading="lazy">`
+                : `<div class="hex-ph"><div class="hex-ph-num">0${idx+1}</div><div class="hex-ph-txt">Foto aqui</div></div>`;
+            return `<div class="hex-item reveal" data-cat="${it.categoria}" data-src="${it.foto||''}">
+                ${media}
+                <div class="hex-ov"><h3>${it.titulo}</h3><span>${it.label}</span></div>
             </div>`;
+        }).join('');
+        return `<div class="hex-row${ri===1?' offset':ri===2?'':''}">${cells}</div>`;
+    }).join('');
+}
+document.getElementById('hexStage').innerHTML = buildHex();
 
-        /* ── FOOTER ── */
-        document.getElementById('footerLogo').innerHTML =
-            primeiroNome + ' <span>' + restanteNome + '</span>';
-        document.getElementById('footerCopy').textContent = CONFIG.rodape_texto;
-        document.getElementById('footerSocial').innerHTML = `
-            <a href="${CONFIG.instagram_link}" target="_blank" rel="noopener" aria-label="Instagram">
-                <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-            </a>
-            <a href="${CONFIG.whatsapp_link}" target="_blank" rel="noopener" aria-label="WhatsApp">
-                <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-            </a>`;
+/* ── 12. PROCESS ── */
+document.getElementById('procTitle').innerHTML = CONFIG.processo_titulo.replace(/([\w]+)$/,'<em>$1</em>');
+document.getElementById('procSub').textContent = CONFIG.processo_subtit;
+const icons = [
+    `<svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`,
+    `<svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>`,
+    `<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
+    `<svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>`,
+];
+document.getElementById('procGrid').innerHTML = CONFIG.processos.map((p,i) =>
+    `<div class="proc-card reveal">
+        <div class="proc-num">${p.num}</div>
+        <div class="proc-icon">${icons[i]||''}</div>
+        <h3>${p.titulo}</h3>
+        <p>${p.texto}</p>
+    </div>`
+).join('');
 
-        /* ============================================================
-           INTERATIVIDADE
-        ============================================================ */
+/* ── 13. CONTACT INFO ── */
+document.getElementById('contTitle').innerHTML = `${CONFIG.contato_titulo_p1}<br><em>${CONFIG.contato_titulo_p2}</em>`;
+document.getElementById('contDesc').textContent = CONFIG.contato_subtitulo;
+document.getElementById('contDet').innerHTML = `
+    <div class="cont-det">
+        <div class="det-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div class="det-txt"><span>Localização</span><p>${CONFIG.cidade}, ${CONFIG.estado} — ${CONFIG.pais}</p></div>
+    </div>
+    <div class="cont-det">
+        <div class="det-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+        <div class="det-txt"><span>Instagram</span><p>${CONFIG.instagram_user}</p></div>
+    </div>
+    <div class="cont-det">
+        <div class="det-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.37 2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.27a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg></div>
+        <div class="det-txt"><span>WhatsApp</span><p>${CONFIG.whatsapp_num}</p></div>
+    </div>`;
 
-        /* Cursor */
-        const cursor = document.getElementById('cursor');
-        const follower = document.getElementById('cursorFollower');
-        let mx = 0, my = 0, fx = 0, fy = 0;
-        document.addEventListener('mousemove', e => {
-            mx = e.clientX; my = e.clientY;
-            cursor.style.transform = `translate(${mx - 4}px, ${my - 4}px)`;
+/* ── 14. FOOTER ── */
+document.getElementById('footLogo').innerHTML = CONFIG.logo
+    ? `<img src="${CONFIG.logo}" alt="${CONFIG.logo_alt}" style="height:${CONFIG.logo_altura_footer}px;">`
+    : `<span class="foot-logo-txt">${pNome} <b>${rNomeStr}</b></span>`;
+document.getElementById('footCopy').textContent = CONFIG.rodape_texto;
+document.getElementById('footSoc').innerHTML = `
+    <a href="${CONFIG.instagram_link}" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+    </a>
+    <a href="${CONFIG.whatsapp_link}" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+    </a>`;
+
+/* ================================================================
+   INTERATIVIDADE
+================================================================ */
+
+/* Cursor */
+const cur=document.getElementById('cur'), curF=document.getElementById('curF');
+let mx=0,my=0,fx=0,fy=0;
+document.addEventListener('mousemove',e=>{
+    mx=e.clientX; my=e.clientY;
+    cur.style.left=mx+'px'; cur.style.top=my+'px';
+});
+(function tick(){
+    fx+=(mx-fx)*.11; fy+=(my-fy)*.11;
+    curF.style.left=fx+'px'; curF.style.top=fy+'px';
+    requestAnimationFrame(tick);
+})();
+document.querySelectorAll('a,button,.hex-item,.f-btn').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{ curF.style.width='54px'; curF.style.height='54px'; curF.style.borderColor='rgba(201,168,76,.8)'; });
+    el.addEventListener('mouseleave',()=>{ curF.style.width='36px'; curF.style.height='36px'; curF.style.borderColor='rgba(201,168,76,.45)'; });
+});
+
+/* Nav scroll */
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>50),{passive:true});
+
+/* Hamburger */
+const ham=document.getElementById('ham'),mob=document.getElementById('mobMenu');
+ham.addEventListener('click',()=>{ham.classList.toggle('open');mob.classList.toggle('open');});
+document.querySelectorAll('.mob-lnk').forEach(a=>a.addEventListener('click',()=>{ham.classList.remove('open');mob.classList.remove('open');}));
+
+/* Reveal on scroll */
+const revObs=new IntersectionObserver(entries=>{
+    entries.forEach((e,i)=>{ if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('in'),i*70); revObs.unobserve(e.target); } });
+},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
+
+/* Portfolio filter */
+document.getElementById('portFilters').addEventListener('click',e=>{
+    const b=e.target.closest('.f-btn'); if(!b) return;
+    document.querySelectorAll('.f-btn').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    const f=b.dataset.f;
+    document.querySelectorAll('.hex-item').forEach(it=>{
+        it.style.display=(f==='all'||it.dataset.cat===f)?'block':'none';
+    });
+    document.querySelectorAll('.hex-row').forEach(row=>{
+        const vis=[...row.querySelectorAll('.hex-item')].some(i=>i.style.display!=='none');
+        row.style.display=vis?'flex':'none';
+    });
+});
+
+/* Lightbox */
+const lb=document.getElementById('lb'),lbImg=document.getElementById('lbImg');
+document.getElementById('hexStage').addEventListener('click',e=>{
+    const it=e.target.closest('.hex-item');
+    if(!it||!it.dataset.src) return;
+    lbImg.src=it.dataset.src; lb.classList.add('open');
+    document.body.style.overflow='hidden';
+});
+function closeLB(){ lb.classList.remove('open'); document.body.style.overflow=''; setTimeout(()=>lbImg.src='',400); }
+document.getElementById('lbClose').addEventListener('click',closeLB);
+lb.addEventListener('click',e=>{ if(e.target===lb) closeLB(); });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeLB(); });
+
+/* ── FORMSPREE AJAX ── */
+const form=document.getElementById('contactForm');
+const subBtn=document.getElementById('subBtn');
+const spinEl=document.getElementById('spin');
+const fSuccess=document.getElementById('fSuccess');
+const fGErr=document.getElementById('fGErr');
+const errs={name:document.getElementById('eN'),email:document.getElementById('eE'),phone:document.getElementById('eP'),style:document.getElementById('eS'),message:document.getElementById('eM')};
+
+function clrErr(){
+    Object.values(errs).forEach(el=>el.textContent='');
+    form.querySelectorAll('[aria-invalid]').forEach(el=>el.removeAttribute('aria-invalid'));
+    fGErr.style.display='none'; fGErr.textContent='';
+}
+function setLoad(on){
+    subBtn.disabled=on;
+    subBtn.querySelector('span').textContent=on?'Enviando...':'Enviar Mensagem';
+    spinEl.style.display=on?'block':'none';
+}
+function xlErr(m){
+    if(!m) return 'Campo inválido.';
+    const l=m.toLowerCase();
+    if(l.includes('required')||l.includes('missing')) return 'Este campo é obrigatório.';
+    if(l.includes('email'))  return 'Por favor, insira um e-mail válido.';
+    if(l.includes('spam'))   return 'Marcado como spam. Tente novamente.';
+    if(l.includes('limit'))  return 'Muitas tentativas. Aguarde alguns minutos.';
+    return m;
+}
+form.addEventListener('submit',async e=>{
+    e.preventDefault(); clrErr(); setLoad(true);
+    try{
+        const res=await fetch(`https://formspree.io/f/${CONFIG.formspree_id}`,{
+            method:'POST', body:new FormData(form), headers:{Accept:'application/json'}
         });
-        (function animateFollower() {
-            fx += (mx - fx) * 0.12;
-            fy += (my - fy) * 0.12;
-            follower.style.transform = `translate(${fx - 16}px, ${fy - 16}px)`;
-            requestAnimationFrame(animateFollower);
-        })();
-        document.querySelectorAll('a, button, .portfolio-item, .filter-btn').forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                follower.style.width = '56px'; follower.style.height = '56px';
-                follower.style.borderColor = 'rgba(201,168,76,0.8)';
-            });
-            el.addEventListener('mouseleave', () => {
-                follower.style.width = '32px'; follower.style.height = '32px';
-                follower.style.borderColor = 'rgba(201,168,76,0.5)';
-            });
-        });
-
-        /* Navbar scroll */
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            navbar.classList.toggle('scrolled', window.scrollY > 50);
-        });
-
-        /* Mobile menu */
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobileMenu');
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-        });
-        document.querySelectorAll('.mobile-link').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                mobileMenu.classList.remove('active');
-            });
-        });
-
-        /* Scroll reveal */
-        const revealObserver = new IntersectionObserver(entries => {
-            entries.forEach((entry, i) => {
-                if (entry.isIntersecting) {
-                    setTimeout(() => entry.target.classList.add('visible'), i * 80);
-                    revealObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-        /* Portfolio filter */
-        document.getElementById('portfolioFilters').addEventListener('click', e => {
-            const btn = e.target.closest('.filter-btn');
-            if (!btn) return;
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            const filter = btn.dataset.filter;
-            document.querySelectorAll('.portfolio-item').forEach(item => {
-                item.style.display = (filter === 'all' || item.dataset.category === filter) ? 'block' : 'none';
-            });
-        });
-
-        /* Lightbox */
-        const lightbox   = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightboxImg');
-        document.getElementById('portfolioGrid').addEventListener('click', e => {
-            const item = e.target.closest('.portfolio-item');
-            if (!item || !item.dataset.src) return;
-            lightboxImg.src = item.dataset.src;
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        });
-        function closeLightbox() {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = '';
-            setTimeout(() => { lightboxImg.src = ''; }, 400);
-        }
-        document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
-        lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
-        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
-
-        /* ── FORMSPREE AJAX ── */
-        const form       = document.getElementById('contactForm');
-        const submitBtn  = document.getElementById('submitBtn');
-        const btnText    = submitBtn.querySelector('.btn-text');
-        const btnSpinner = document.getElementById('btnSpinner');
-        const successBox = document.getElementById('formSuccess');
-        const globalErr  = document.getElementById('formGlobalError');
-        const fieldErrors = {
-            name:    document.getElementById('err-name'),
-            email:   document.getElementById('err-email'),
-            phone:   document.getElementById('err-phone'),
-            style:   document.getElementById('err-style'),
-            message: document.getElementById('err-message'),
-        };
-
-        function clearErrors() {
-            Object.values(fieldErrors).forEach(el => { el.textContent = ''; });
-            form.querySelectorAll('[aria-invalid]').forEach(el => el.removeAttribute('aria-invalid'));
-            globalErr.style.display = 'none'; globalErr.textContent = '';
-        }
-        function setLoading(on) {
-            submitBtn.disabled = on;
-            btnText.textContent = on ? 'Enviando...' : 'Enviar Mensagem';
-            btnSpinner.style.display = on ? 'block' : 'none';
-        }
-        function translateError(msg) {
-            if (!msg) return 'Campo inválido.';
-            const m = msg.toLowerCase();
-            if (m.includes('required') || m.includes('missing')) return 'Este campo é obrigatório.';
-            if (m.includes('email'))  return 'Por favor, insira um e-mail válido.';
-            if (m.includes('spam'))   return 'Mensagem marcada como spam. Tente novamente.';
-            if (m.includes('limit'))  return 'Muitas tentativas. Aguarde alguns minutos.';
-            return msg;
-        }
-
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            clearErrors();
-            setLoading(true);
-            try {
-                const response = await fetch('https://formspree.io/f/mgojkpqo', {
-                    method: 'POST',
-                    body: new FormData(form),
-                    headers: { 'Accept': 'application/json' }
+        const data=await res.json();
+        if(res.ok){
+            form.style.display='none'; fSuccess.style.display='block';
+        } else {
+            if(data.errors){
+                data.errors.forEach(er=>{
+                    if(er.field&&errs[er.field]){ errs[er.field].textContent=xlErr(er.message); const inp=form.querySelector(`[name="${er.field}"]`); if(inp) inp.setAttribute('aria-invalid','true'); }
+                    else { fGErr.textContent=xlErr(er.message); fGErr.style.display='block'; }
                 });
-                const result = await response.json();
-                if (response.ok) {
-                    form.style.display = 'none';
-                    successBox.style.display = 'block';
-                } else {
-                    if (result.errors) {
-                        result.errors.forEach(err => {
-                            if (err.field && fieldErrors[err.field]) {
-                                fieldErrors[err.field].textContent = translateError(err.message);
-                                const input = form.querySelector(`[name="${err.field}"]`);
-                                if (input) input.setAttribute('aria-invalid', 'true');
-                            } else {
-                                globalErr.textContent = translateError(err.message);
-                                globalErr.style.display = 'block';
-                            }
-                        });
-                    } else {
-                        globalErr.textContent = 'Erro ao enviar. Tente novamente.';
-                        globalErr.style.display = 'block';
-                    }
-                    setLoading(false);
-                }
-            } catch {
-                globalErr.textContent = 'Sem conexão. Verifique sua internet.';
-                globalErr.style.display = 'block';
-                setLoading(false);
-            }
-        });
+            } else { fGErr.textContent='Erro ao enviar. Tente novamente.'; fGErr.style.display='block'; }
+            setLoad(false);
+        }
+    } catch { fGErr.textContent='Sem conexão. Verifique sua internet.'; fGErr.style.display='block'; setLoad(false); }
+});
 
-    })();
-    </script>
+})();
+</script>
 </body>
 </html>
